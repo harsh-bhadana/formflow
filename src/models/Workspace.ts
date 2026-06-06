@@ -7,9 +7,19 @@ export interface IWorkspace extends Document {
 }
 
 const WorkspaceSchema: Schema = new Schema({
-  name: { type: String, required: true },
-  slug: { type: String, required: true, unique: true }, // For tenant-scoped subroutes (e.g., dashboard/tenant-slug)
-  createdAt: { type: Date, default: Date.now },
+  name: { 
+    type: String, 
+    required: true 
+  },
+  slug: { 
+    type: String, 
+    required: true, 
+    unique: true 
+  }, // For tenant-scoped subroutes (e.g., dashboard/[slug])
+  createdAt: { 
+    type: Date, 
+    default: Date.now 
+  },
 });
 
 export default mongoose.models.Workspace || mongoose.model<IWorkspace>('Workspace', WorkspaceSchema);
