@@ -3,7 +3,7 @@ import { streamText, Output } from 'ai';
 import { getVertexModel, isVertexConfigured, SurveyGenerationSchema } from '@/src/lib/vertex';
 import { auth } from '@/src/lib/auth';
 import { headers } from 'next/headers';
-import dbConnect from '@/src/lib/db';
+import { dbConnect } from '@/src/lib/db';
 
 export const runtime = 'nodejs'; // Ensure Node.js runtime for MongoDB support
 

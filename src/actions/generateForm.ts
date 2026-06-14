@@ -3,7 +3,7 @@
 import mongoose from 'mongoose';
 import { revalidatePath } from 'next/cache';
 import { headers } from 'next/headers';
-import dbConnect from '@/src/lib/db';
+import { dbConnect } from '@/src/lib/db';
 import Workspace from '@/src/models/Workspace';
 import Survey from '@/src/models/Survey';
 import { auth } from '@/src/lib/auth';
